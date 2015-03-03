@@ -15,6 +15,18 @@
 		D6B0A82E1AA5590D00020C7B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6B0A82D1AA5590D00020C7B /* Images.xcassets */; };
 		D6B0A8311AA5590D00020C7B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6B0A82F1AA5590D00020C7B /* LaunchScreen.xib */; };
 		D6B0A83D1AA5590E00020C7B /* klineTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B0A83C1AA5590D00020C7B /* klineTests.m */; };
+		D6B0A84E1AA562B700020C7B /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B0A84D1AA562B700020C7B /* BaseViewController.m */; };
+		D6B0A8511AA562D900020C7B /* StockKlineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B0A8501AA562D900020C7B /* StockKlineViewController.m */; };
+		D6B0A8541AA5632100020C7B /* StockBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B0A8531AA5632100020C7B /* StockBaseView.m */; };
+		D6B0A8571AA5635600020C7B /* StockKlineView.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B0A8561AA5635600020C7B /* StockKlineView.m */; };
+		D6B0A85A1AA5639300020C7B /* StockKlineVolumeView.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B0A8591AA5639300020C7B /* StockKlineVolumeView.m */; };
+		D6B0A85D1AA5662300020C7B /* StockGraphHostingView.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B0A85C1AA5662300020C7B /* StockGraphHostingView.m */; };
+		D6B0A8621AA56CF700020C7B /* StockCrossShapedView.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B0A8611AA56CF700020C7B /* StockCrossShapedView.m */; };
+		D6B0A8651AA56EC900020C7B /* UIColor+Style.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B0A8641AA56EC900020C7B /* UIColor+Style.m */; };
+		D6B0A8681AA57C6100020C7B /* StockPriceMovementUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B0A8671AA57C6100020C7B /* StockPriceMovementUtil.m */; };
+		D6B0A86B1AA57ED400020C7B /* StockKlineData.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B0A86A1AA57ED400020C7B /* StockKlineData.m */; };
+		D6B0A86E1AA57F3F00020C7B /* Util.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B0A86D1AA57F3F00020C7B /* Util.m */; };
+		D6B0A8711AA584EA00020C7B /* data.plist in Resources */ = {isa = PBXBuildFile; fileRef = D6B0A8701AA584EA00020C7B /* data.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +55,30 @@
 		D6B0A8361AA5590D00020C7B /* klineTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = klineTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6B0A83B1AA5590D00020C7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D6B0A83C1AA5590D00020C7B /* klineTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = klineTests.m; sourceTree = "<group>"; };
+		D6B0A84C1AA562B700020C7B /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		D6B0A84D1AA562B700020C7B /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		D6B0A84F1AA562D900020C7B /* StockKlineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StockKlineViewController.h; sourceTree = "<group>"; };
+		D6B0A8501AA562D900020C7B /* StockKlineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StockKlineViewController.m; sourceTree = "<group>"; };
+		D6B0A8521AA5632100020C7B /* StockBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StockBaseView.h; sourceTree = "<group>"; };
+		D6B0A8531AA5632100020C7B /* StockBaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StockBaseView.m; sourceTree = "<group>"; };
+		D6B0A8551AA5635600020C7B /* StockKlineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StockKlineView.h; sourceTree = "<group>"; };
+		D6B0A8561AA5635600020C7B /* StockKlineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StockKlineView.m; sourceTree = "<group>"; };
+		D6B0A8581AA5639300020C7B /* StockKlineVolumeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StockKlineVolumeView.h; sourceTree = "<group>"; };
+		D6B0A8591AA5639300020C7B /* StockKlineVolumeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StockKlineVolumeView.m; sourceTree = "<group>"; };
+		D6B0A85B1AA5662300020C7B /* StockGraphHostingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StockGraphHostingView.h; sourceTree = "<group>"; };
+		D6B0A85C1AA5662300020C7B /* StockGraphHostingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StockGraphHostingView.m; sourceTree = "<group>"; };
+		D6B0A85F1AA56C2300020C7B /* StockHeard.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StockHeard.h; sourceTree = SOURCE_ROOT; };
+		D6B0A8601AA56CF700020C7B /* StockCrossShapedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StockCrossShapedView.h; sourceTree = "<group>"; };
+		D6B0A8611AA56CF700020C7B /* StockCrossShapedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StockCrossShapedView.m; sourceTree = "<group>"; };
+		D6B0A8631AA56EC900020C7B /* UIColor+Style.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Style.h"; sourceTree = SOURCE_ROOT; };
+		D6B0A8641AA56EC900020C7B /* UIColor+Style.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Style.m"; sourceTree = SOURCE_ROOT; };
+		D6B0A8661AA57C6100020C7B /* StockPriceMovementUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StockPriceMovementUtil.h; sourceTree = SOURCE_ROOT; };
+		D6B0A8671AA57C6100020C7B /* StockPriceMovementUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StockPriceMovementUtil.m; sourceTree = SOURCE_ROOT; };
+		D6B0A8691AA57ED400020C7B /* StockKlineData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StockKlineData.h; sourceTree = SOURCE_ROOT; };
+		D6B0A86A1AA57ED400020C7B /* StockKlineData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StockKlineData.m; sourceTree = SOURCE_ROOT; };
+		D6B0A86C1AA57F3F00020C7B /* Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Util.h; sourceTree = SOURCE_ROOT; };
+		D6B0A86D1AA57F3F00020C7B /* Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Util.m; sourceTree = SOURCE_ROOT; };
+		D6B0A8701AA584EA00020C7B /* data.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = data.plist; sourceTree = "<group>"; };
 		DCA07A15189B41A2DD0125E3 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -151,6 +187,10 @@
 		D6B0A8471AA55A9300020C7B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				D6B0A84C1AA562B700020C7B /* BaseViewController.h */,
+				D6B0A84D1AA562B700020C7B /* BaseViewController.m */,
+				D6B0A84F1AA562D900020C7B /* StockKlineViewController.h */,
+				D6B0A8501AA562D900020C7B /* StockKlineViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -158,6 +198,15 @@
 		D6B0A8481AA55A9300020C7B /* Help */ = {
 			isa = PBXGroup;
 			children = (
+				D6B0A85F1AA56C2300020C7B /* StockHeard.h */,
+				D6B0A8631AA56EC900020C7B /* UIColor+Style.h */,
+				D6B0A8641AA56EC900020C7B /* UIColor+Style.m */,
+				D6B0A8661AA57C6100020C7B /* StockPriceMovementUtil.h */,
+				D6B0A8671AA57C6100020C7B /* StockPriceMovementUtil.m */,
+				D6B0A8691AA57ED400020C7B /* StockKlineData.h */,
+				D6B0A86A1AA57ED400020C7B /* StockKlineData.m */,
+				D6B0A86C1AA57F3F00020C7B /* Util.h */,
+				D6B0A86D1AA57F3F00020C7B /* Util.m */,
 			);
 			path = Help;
 			sourceTree = "<group>";
@@ -172,6 +221,7 @@
 		D6B0A84A1AA55A9300020C7B /* Thrid */ = {
 			isa = PBXGroup;
 			children = (
+				D6B0A86F1AA584EA00020C7B /* Resource */,
 			);
 			path = Thrid;
 			sourceTree = "<group>";
@@ -179,8 +229,26 @@
 		D6B0A84B1AA55A9300020C7B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D6B0A8521AA5632100020C7B /* StockBaseView.h */,
+				D6B0A8531AA5632100020C7B /* StockBaseView.m */,
+				D6B0A8551AA5635600020C7B /* StockKlineView.h */,
+				D6B0A8561AA5635600020C7B /* StockKlineView.m */,
+				D6B0A8581AA5639300020C7B /* StockKlineVolumeView.h */,
+				D6B0A8591AA5639300020C7B /* StockKlineVolumeView.m */,
+				D6B0A8601AA56CF700020C7B /* StockCrossShapedView.h */,
+				D6B0A8611AA56CF700020C7B /* StockCrossShapedView.m */,
+				D6B0A85B1AA5662300020C7B /* StockGraphHostingView.h */,
+				D6B0A85C1AA5662300020C7B /* StockGraphHostingView.m */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		D6B0A86F1AA584EA00020C7B /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				D6B0A8701AA584EA00020C7B /* data.plist */,
+			);
+			path = Resource;
 			sourceTree = "<group>";
 		};
 		EF3EF21688F53D20733974E1 /* Frameworks */ = {
@@ -275,6 +343,7 @@
 			files = (
 				D6B0A82C1AA5590D00020C7B /* Main.storyboard in Resources */,
 				D6B0A8311AA5590D00020C7B /* LaunchScreen.xib in Resources */,
+				D6B0A8711AA584EA00020C7B /* data.plist in Resources */,
 				D6B0A82E1AA5590D00020C7B /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -326,8 +395,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6B0A8511AA562D900020C7B /* StockKlineViewController.m in Sources */,
 				D6B0A8291AA5590D00020C7B /* ViewController.m in Sources */,
+				D6B0A8651AA56EC900020C7B /* UIColor+Style.m in Sources */,
+				D6B0A8571AA5635600020C7B /* StockKlineView.m in Sources */,
+				D6B0A85A1AA5639300020C7B /* StockKlineVolumeView.m in Sources */,
+				D6B0A86E1AA57F3F00020C7B /* Util.m in Sources */,
+				D6B0A85D1AA5662300020C7B /* StockGraphHostingView.m in Sources */,
+				D6B0A8621AA56CF700020C7B /* StockCrossShapedView.m in Sources */,
+				D6B0A8681AA57C6100020C7B /* StockPriceMovementUtil.m in Sources */,
+				D6B0A84E1AA562B700020C7B /* BaseViewController.m in Sources */,
+				D6B0A86B1AA57ED400020C7B /* StockKlineData.m in Sources */,
 				D6B0A8261AA5590D00020C7B /* AppDelegate.m in Sources */,
+				D6B0A8541AA5632100020C7B /* StockBaseView.m in Sources */,
 				D6B0A8231AA5590D00020C7B /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -387,6 +467,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: 柏信 潘 (ZT6BEVH27B)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -407,6 +488,10 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -429,7 +514,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: 柏信 潘 (ZT6BEVH27B)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: 柏信 潘 (ZT6BEVH27B)";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -442,6 +528,10 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -453,6 +543,8 @@
 			baseConfigurationReference = 18A075BDA88E5742C02C11A7 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: 柏信 潘 (ZT6BEVH27B)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = kline/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -464,6 +556,7 @@
 			baseConfigurationReference = DCA07A15189B41A2DD0125E3 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: 柏信 潘 (ZT6BEVH27B)";
 				INFOPLIST_FILE = kline/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";

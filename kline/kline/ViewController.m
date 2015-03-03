@@ -7,8 +7,11 @@
 //
 
 #import "ViewController.h"
+#import "StockKlineViewController.h"
 
 @interface ViewController ()
+
+@property (nonatomic, strong) StockKlineViewController* klineVC;
 
 @end
 
@@ -16,12 +19,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-}
+    
+    
+    StockKlineViewController *klineVC = [[StockKlineViewController alloc] init];
+    self.klineVC = klineVC;
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    self.klineVC.view.frame = self.view.frame;
+    [self.view addSubview:self.klineVC.view];
+
+    [self addChildViewController:klineVC];
+
 }
 
 @end
