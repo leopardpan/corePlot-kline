@@ -22,7 +22,9 @@
 @end
 
 @implementation StockKlineViewController
-
+{
+    CGFloat lastLen;
+}
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     
@@ -105,21 +107,16 @@
 #pragma mark - 拖拽手势
 - (void)loadDataByPan:(CGFloat)len tag:(NSString *)tag
 {
-    NSLog(@"\n\t\t\t\t\t\tlen = %f\n",len);
+    NSLog(@"len     =      %f",len);
     loadingData = YES;
+    if (len <= 0) {
+        lastLen = len;
+    }
     if (len > 0) {
-        // 右移, 向后取数据
-        if (showRange.location == 0) {
-            loadingData = NO;
-        } else {
-            //            showRange.location = showRange.location < SCROLL_SPEED ? 0 : showRange.location - SCROLL_SPEED;
-            showRange.location = len/SCROLL_SPEED;
-            [self dataSourceChange];
-            loadingData = NO;
-        }
+        panOffset = lastLen;
+        loadingData = NO;
     } else {
-        //        int mLocation = (int)showRange.location + SCROLL_SPEED;
-        //        showRange.location = mLocation >= [dataSource count] ? [dataSource count] - SCROLL_SPEED : mLocation;
+ 
         showRange.location = -len/SCROLL_SPEED;
         [self dataSourceChange];
         loadingData = NO;
@@ -185,14 +182,13 @@
             num = [NSNumber numberWithInt:(int)idx];
         } else if (fieldEnum == CPTBarPlotFieldBarTip) {
             
-            // 返回high ---》中间的竖线，最上面的值
+            // 返回high ---》中间的竖线，top
             num = [NSNumber numberWithFloat:[[infomap objectForKey:@"HIGH"] floatValue]];
-            //            num = @54;
+    
         } else if (fieldEnum == CPTBarPlotFieldBarBase) {
             
-            // 返回low ---》中间的竖线，最下面的值
+            // 返回low ---》中间的竖线，bottom
             num = [NSNumber numberWithFloat:[[infomap objectForKey:@"LOW"] floatValue]];
-            //            num = @54;
         }
         
     } else if ([key isEqualToString:kPlotAvg]) {
@@ -207,7 +203,6 @@
             num = [NSNumber numberWithInt:(int)idx];
         } else if (fieldEnum == CPTScatterPlotFieldY) {
             num = [NSNumber numberWithFloat:[[infomap objectForKey:@"VOLUME"] floatValue]];
-            //            num = @77;
         }
     }
     //    NSLog(@"key = %@   num = %@",key,num);

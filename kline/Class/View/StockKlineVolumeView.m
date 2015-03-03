@@ -72,7 +72,7 @@
 {
     NSMutableDictionary *labels = [NSMutableDictionary dictionaryWithCapacity:5];
     NSArray *indexs = [NSArray arrayWithObjects:[NSNumber numberWithInt:0], [NSNumber numberWithInt:(int)[dataSource count] - 1], nil];
-    NSLog(@"indexs = %@",indexs);
+  
     for (NSNumber *idx in indexs) {
         NSDictionary *infoMap = (NSDictionary *)[dataSource objectAtIndex:[idx intValue]];
         if ([idx intValue] == 0) {

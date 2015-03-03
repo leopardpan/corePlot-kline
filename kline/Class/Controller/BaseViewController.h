@@ -38,6 +38,7 @@
     NSMutableArray *showDataSource; //!< 显示的数据源.
     BOOL loadingData; //!< 当前是否在加载数据.
     NSRange showRange; //!< .
+    CGFloat panOffset; // 拖拽偏移量
     int xAxisLen; //!< x轴显示长度.
 }
 /**

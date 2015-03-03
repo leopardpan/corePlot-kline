@@ -136,7 +136,7 @@
         }
         CPTAxisLabel *label = [[CPTAxisLabel alloc] initWithText:text textStyle:textStyle];
         label.tickLocation = CPTDecimalFromInt([location intValue]);
-        NSLog(@"location = %@",location);
+     
         // 离x轴的偏移量
         label.offset = 10.0f;
         //        label.rotation = 0.5;

@@ -13,9 +13,7 @@
 @end
 
 @implementation BaseViewController
-{
-    CGFloat panOffset;
-}
+
 
 
 #pragma mark -
@@ -81,19 +79,15 @@
         }
         StockBaseView *view = [stockBaseViewMap objectForKey:tag];
         CGPoint point = [sender translationInView:view.crossView];
-        //        if (point.x > PAN_LEN || point.x < -PAN_LEN) {
-        
+       
         CGFloat panCount = panOffset + point.x;
         [self loadDataByPan:panCount tag:tag];
-        NSLog(@"x is %f", point.x);
+        NSLog(@"pancount                  =============            %f",panOffset);
         if (sender.state  == UIGestureRecognizerStateEnded) {
-            NSLog(@"手指离开屏幕");
-            panOffset = panOffset + point.x;
-        }
 
-        
-        //            [sender setTranslation:CGPointZero inView:view.crossView];
-        //        }
+            panOffset = panOffset + point.x;
+
+        }
     }
 }
 /*
@@ -231,7 +225,7 @@
     if (location + len > count) {
         showRange.length = count - location;
     }
-    NSLog(@"location = %lu    lenght = %lu", (unsigned long)showRange.location,(unsigned long)showRange.length);
+    NSLog(@"location = %lu    lenght = %lu  count = %lu  xAxisLen = %d", (unsigned long)showRange.location,(unsigned long)showRange.length,(unsigned long)dataSource.count,xAxisLen);
 }
 
 
