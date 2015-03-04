@@ -24,8 +24,6 @@
         NSDictionary *dic = dataSource[i];
         NSDictionary  *dicData = [util dictionarChangeDic:dic];
         
-      
-        
         [data addObject:dicData];
     }
     

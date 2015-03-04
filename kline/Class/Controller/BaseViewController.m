@@ -15,7 +15,6 @@
 @implementation BaseViewController
 
 
-
 #pragma mark -
 #pragma mark 初始化方法
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -206,11 +205,10 @@
                 
                 [baseView dataSourceChanged];
             }
-            
+
         }
         
     }
-    
     
 }
 

@@ -53,7 +53,7 @@
     StockGesture uiview1Gesture = {YES,YES,YES};
     
     // k线图
-    StockKlineView *uiview1 = [[StockKlineView alloc] initWithFrame:CGRectMake(0, 20, k_screen_width, 350) tag:@"kline" padding:uiviewPadding drawInfo:uiview1DrawInfo gesture:uiview1Gesture delegate:self isKline:YES];
+    StockKlineView *uiview1 = [[StockKlineView alloc] initWithFrame:CGRectMake(0, 0, k_screen_width, 300) tag:@"kline" padding:uiviewPadding drawInfo:uiview1DrawInfo gesture:uiview1Gesture delegate:self isKline:YES];
     uiview1.backgroundColor = [UIColor colorWithHexString:@"#FFFFFF"];
     
     [stockBaseViewMap setObject:uiview1 forKey:@"kline"];
@@ -82,17 +82,17 @@
     NSDictionary *infoMap = (NSDictionary *)obj;
     if ([type isEqualToString:TAG_TOP]) {
         return [NSString stringWithFormat:@"  日期：%i 开：%.2f 高：%.2f 低：%.2f 收：%.2f 成交量：%lli",
-                [[infoMap objectForKey:@"DATA"] intValue]
-                , [(NSNumber *)[infoMap objectForKey:@"OPEN"] floatValue]
-                , [(NSNumber *)[infoMap objectForKey:@"HIGH"] floatValue]
-                , [(NSNumber *)[infoMap objectForKey:@"LOW"] floatValue]
-                , [(NSNumber *)[infoMap objectForKey:@"CLOSE"] floatValue]
-                , [[infoMap objectForKey:@"VOLUME"] longLongValue]];
+                [[infoMap objectForKey:@"date"] intValue]
+                , [(NSNumber *)[infoMap objectForKey:@"open"] floatValue]
+                , [(NSNumber *)[infoMap objectForKey:@"high"] floatValue]
+                , [(NSNumber *)[infoMap objectForKey:@"low"] floatValue]
+                , [(NSNumber *)[infoMap objectForKey:@"close"] floatValue]
+                , [[infoMap objectForKey:@"volume"] longLongValue]];
     } else if ([type isEqualToString:TAG_LEFT]) {
         return @"";
     } else if ([type isEqualToString:TAG_BOTTOM]) {
         
-        return [infoMap objectForKey:@"DATA"];
+        return [infoMap objectForKey:@"date"];
     } else if ([type isEqualToString:TAG_RIGHT]) {
         return @"";
     }
@@ -117,7 +117,14 @@
         loadingData = NO;
     } else {
  
-        showRange.location = -len/SCROLL_SPEED;
+        NSLog(@"========     %d       ========",xAxisLen);
+        int xa ;
+        if (1000/xAxisLen == 0) {
+            xa = 1;
+        }else {
+            xa = 500/xAxisLen;
+        }
+        showRange.location = -len/xa;
         [self dataSourceChange];
         loadingData = NO;
     }
@@ -141,8 +148,8 @@
 - (CPTFill *)barFillForBarPlot:(CPTBarPlot *)barPlot recordIndex:(NSUInteger)idx
 {
     NSDictionary *infomap = [showDataSource objectAtIndex:idx];
-    NSNumber *m1 = [NSNumber numberWithFloat:[[infomap objectForKey:@"OPEN"] floatValue]];
-    NSNumber *m2 = [NSNumber numberWithFloat:[[infomap objectForKey:@"CLOSE"] floatValue]];
+    NSNumber *m1 = [NSNumber numberWithFloat:[[infomap objectForKey:@"open"] floatValue]];
+    NSNumber *m2 = [NSNumber numberWithFloat:[[infomap objectForKey:@"close"] floatValue]];
     if ([m1 isLessThan:m2]) {
         
         return [CPTFill fillWithColor:[CPTColor colorWithHexString:COLOR_LINE_RED]];
@@ -165,15 +172,15 @@
         if (fieldEnum == CPTBarPlotFieldBarLocation) {
             num = [NSNumber numberWithInt:(int)idx];
         } else if (fieldEnum == CPTBarPlotFieldBarTip || fieldEnum == CPTBarPlotFieldBarBase) {
-            NSNumber *m1 = [NSNumber numberWithFloat:[[infomap objectForKey:@"OPEN"] floatValue]];
-            NSNumber *m2 = [NSNumber numberWithFloat:[[infomap objectForKey:@"CLOSE"] floatValue]];
+            NSNumber *m1 = [NSNumber numberWithFloat:[[infomap objectForKey:@"open"] floatValue]];
+            NSNumber *m2 = [NSNumber numberWithFloat:[[infomap objectForKey:@"close"] floatValue]];
             if (fieldEnum == CPTBarPlotFieldBarTip) {
                 
                 num = [m1 isLessThan:m2] ? m2 : m1;
-                //                            num = @44;
+                
             } else if (fieldEnum == CPTBarPlotFieldBarBase) {
                 num = [m1 isLessThan:m2] ? m1 : m2;
-                //                            num = @44;
+           
             }
             
         }
@@ -183,26 +190,26 @@
         } else if (fieldEnum == CPTBarPlotFieldBarTip) {
             
             // 返回high ---》中间的竖线，top
-            num = [NSNumber numberWithFloat:[[infomap objectForKey:@"HIGH"] floatValue]];
+            num = [NSNumber numberWithFloat:[[infomap objectForKey:@"high"] floatValue]];
     
         } else if (fieldEnum == CPTBarPlotFieldBarBase) {
             
             // 返回low ---》中间的竖线，bottom
-            num = [NSNumber numberWithFloat:[[infomap objectForKey:@"LOW"] floatValue]];
+            num = [NSNumber numberWithFloat:[[infomap objectForKey:@"low"] floatValue]];
         }
         
     } else if ([key isEqualToString:kPlotAvg]) {
         if(fieldEnum == CPTScatterPlotFieldX){
             num = [NSNumber numberWithInt:(int)idx];
         } else if (fieldEnum == CPTScatterPlotFieldY) {
-            num = [NSNumber numberWithFloat:[[infomap objectForKey:@"ADJ"] floatValue]];
+            num = [NSNumber numberWithFloat:[[infomap objectForKey:@"adj"] floatValue]];
         }
         
     } else if ([key isEqualToString:kPlotVolume]) {
         if(fieldEnum == CPTScatterPlotFieldX){
             num = [NSNumber numberWithInt:(int)idx];
         } else if (fieldEnum == CPTScatterPlotFieldY) {
-            num = [NSNumber numberWithFloat:[[infomap objectForKey:@"VOLUME"] floatValue]];
+            num = [NSNumber numberWithFloat:[[infomap objectForKey:@"volume"] floatValue]];
         }
     }
     //    NSLog(@"key = %@   num = %@",key,num);

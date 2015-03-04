@@ -16,9 +16,9 @@
     
     // 先循环一次datasource获得最高价和最低价
     for (NSDictionary *map in dataSource) {
-        float mZGCJ = [(NSNumber *)[map objectForKey:@"HIGH"] floatValue];
-        float mZDCJ = [(NSNumber *)[map objectForKey:@"LOW"] floatValue];
-        float mADJ = [(NSNumber *)[map objectForKey:@"ADJ"] floatValue];
+        float mZGCJ = [(NSNumber *)[map objectForKey:@"high"] floatValue];
+        float mZDCJ = [(NSNumber *)[map objectForKey:@"low"] floatValue];
+        float mADJ = [(NSNumber *)[map objectForKey:@"adj"] floatValue];
         float max = [self getMaxWithNum1:mZDCJ num2:mZGCJ num3:mADJ];
         float min = [self getMinWithNum1:mZDCJ num2:mZGCJ num3:mADJ];
         
@@ -78,9 +78,9 @@
     for (NSNumber *idx in indexs) {
         NSDictionary *infoMap = (NSDictionary *)[dataSource objectAtIndex:[idx intValue]];
         if ([idx intValue] == 0) {
-            [labels setObject:[NSNumber numberWithInt:([idx intValue] + 5)] forKey:[infoMap objectForKey:@"DATA"]];
+            [labels setObject:[NSNumber numberWithInt:([idx intValue] + 5)] forKey:[infoMap objectForKey:@"date"]];
         } else {
-            [labels setObject:[NSNumber numberWithInt:([idx intValue] - 5)] forKey:[infoMap objectForKey:@"DATA"]];
+            [labels setObject:[NSNumber numberWithInt:([idx intValue] - 5)] forKey:[infoMap objectForKey:@"date"]];
         }
     }
     [StockPriceMovementUtil drawAxisLabel:xAxis labels:labels textColor:nil];

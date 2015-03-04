@@ -22,21 +22,6 @@
     return self;
 }
 
-
-+ (UILabel *)creatMovelLineLabelFrame:(CGRect)rect
-{
-    UILabel *label = [[UILabel alloc] initWithFrame:rect];
-    label.font = [UIFont systemFontOfSize:8];
-    label.layer.cornerRadius = 5;
-    label.backgroundColor = [UIColor whiteColor];
-    label.textColor = [UIColor blackColor];
-    label.textAlignment = UITextAlignmentCenter;
-    label.alpha = 0.8;
-    
-    return label;
-}
-
-
 - (NSNumber *)sumArrayWithData:(NSArray *)data andRange:(NSRange)range
 {
     CGFloat value = 0;
@@ -52,9 +37,6 @@
     }
     return [NSNumber numberWithFloat:value];
 }
-
-
-
 
 #pragma mark - 把NSNumber转换成NSString
 - (NSString *)numberWithStringDic:(NSDictionary *)dic str:(NSString *)str
@@ -84,36 +66,18 @@
     NSMutableDictionary *myDict = [[NSMutableDictionary alloc] init];
     
     NSArray *keys = [dic allKeys];
-    //    NSString *date_value = [rs stringForColumn:@"DATA"];
-    //    double open_value = [rs doubleForColumn:@"OPEN"];
-    //    double high_value = [rs doubleForColumn:@"HIGH"];
-    //    double low_value = [rs doubleForColumn:@"LOW"];
-    //    double close_value = [rs doubleForColumn:@"CLOSE"];
-    //    long volume_value = [rs longForColumn:@"VOLUME"];
-    //    double adj_value = [rs doubleForColumn:@"ADJ"];
-    
     for (NSString *key in keys) {
         if ([key isEqualToString:@"date"]) {
-            //             [myDict setValue:[self numberChangeStringDateDic:dic str:key] forKey:@"DATA"];
-            [myDict setValue:[dic objectForKey:key] forKey:@"DATA"];
+
+            [myDict setValue:[dic objectForKey:key] forKey:key];
         }else {
-            if ([key isEqualToString:@"open"]) {
-                [myDict setValue:dic[key] forKey:@"OPEN"];
-            }else if ([key isEqualToString:@"close"]) {
-                [myDict setValue:dic[key] forKey:@"CLOSE"];
-            }else if ([key isEqualToString:@"low"]) {
-                [myDict setValue:dic[key] forKey:@"LOW"];
-            }else if ([key isEqualToString:@"volume"]) {
-                [myDict setValue:dic[key] forKey:@"VOLUME"];
-            }else if ([key isEqualToString:@"high"]) {
-                [myDict setValue:dic[key] forKey:@"HIGH"];
-            }
-            
+
+            [myDict setValue:dic[key] forKey:key];
             
             if ([key isEqualToString:@"close"]) {
-                [myDict setValue:dic[key] forKey:@"ADJ"];
+                [myDict setValue:dic[key] forKey:@"adj"];
             }
-            //            [myDict setValue:[self numberWithStringDic:dic str:key] forKey:key];
+
         }
     }
     

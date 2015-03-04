@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0EAE7426BE3953A92698D293 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A35CEE7C9D7A877DF1B75F9 /* libPods.a */; };
+		D625DFC11AA6A86F000A82DC /* MyKlineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D625DFC01AA6A86F000A82DC /* MyKlineViewController.m */; };
+		D625DFC41AA6AFA4000A82DC /* CorePlotKlineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D625DFC31AA6AFA4000A82DC /* CorePlotKlineViewController.m */; };
 		D6B0A8231AA5590D00020C7B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B0A8221AA5590D00020C7B /* main.m */; };
 		D6B0A8261AA5590D00020C7B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B0A8251AA5590D00020C7B /* AppDelegate.m */; };
 		D6B0A8291AA5590D00020C7B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B0A8281AA5590D00020C7B /* ViewController.m */; };
@@ -42,6 +44,10 @@
 /* Begin PBXFileReference section */
 		18A075BDA88E5742C02C11A7 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		4A35CEE7C9D7A877DF1B75F9 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		D625DFBF1AA6A86F000A82DC /* MyKlineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyKlineViewController.h; sourceTree = "<group>"; };
+		D625DFC01AA6A86F000A82DC /* MyKlineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyKlineViewController.m; sourceTree = "<group>"; };
+		D625DFC21AA6AFA4000A82DC /* CorePlotKlineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CorePlotKlineViewController.h; sourceTree = "<group>"; };
+		D625DFC31AA6AFA4000A82DC /* CorePlotKlineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CorePlotKlineViewController.m; sourceTree = "<group>"; };
 		D6B0A81D1AA5590D00020C7B /* kline.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kline.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6B0A8211AA5590D00020C7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D6B0A8221AA5590D00020C7B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -191,6 +197,10 @@
 				D6B0A84D1AA562B700020C7B /* BaseViewController.m */,
 				D6B0A84F1AA562D900020C7B /* StockKlineViewController.h */,
 				D6B0A8501AA562D900020C7B /* StockKlineViewController.m */,
+				D625DFBF1AA6A86F000A82DC /* MyKlineViewController.h */,
+				D625DFC01AA6A86F000A82DC /* MyKlineViewController.m */,
+				D625DFC21AA6AFA4000A82DC /* CorePlotKlineViewController.h */,
+				D625DFC31AA6AFA4000A82DC /* CorePlotKlineViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -203,10 +213,6 @@
 				D6B0A8641AA56EC900020C7B /* UIColor+Style.m */,
 				D6B0A8661AA57C6100020C7B /* StockPriceMovementUtil.h */,
 				D6B0A8671AA57C6100020C7B /* StockPriceMovementUtil.m */,
-				D6B0A8691AA57ED400020C7B /* StockKlineData.h */,
-				D6B0A86A1AA57ED400020C7B /* StockKlineData.m */,
-				D6B0A86C1AA57F3F00020C7B /* Util.h */,
-				D6B0A86D1AA57F3F00020C7B /* Util.m */,
 			);
 			path = Help;
 			sourceTree = "<group>";
@@ -214,6 +220,10 @@
 		D6B0A8491AA55A9300020C7B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D6B0A8691AA57ED400020C7B /* StockKlineData.h */,
+				D6B0A86A1AA57ED400020C7B /* StockKlineData.m */,
+				D6B0A86C1AA57F3F00020C7B /* Util.h */,
+				D6B0A86D1AA57F3F00020C7B /* Util.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -397,11 +407,13 @@
 			files = (
 				D6B0A8511AA562D900020C7B /* StockKlineViewController.m in Sources */,
 				D6B0A8291AA5590D00020C7B /* ViewController.m in Sources */,
+				D625DFC41AA6AFA4000A82DC /* CorePlotKlineViewController.m in Sources */,
 				D6B0A8651AA56EC900020C7B /* UIColor+Style.m in Sources */,
 				D6B0A8571AA5635600020C7B /* StockKlineView.m in Sources */,
 				D6B0A85A1AA5639300020C7B /* StockKlineVolumeView.m in Sources */,
 				D6B0A86E1AA57F3F00020C7B /* Util.m in Sources */,
 				D6B0A85D1AA5662300020C7B /* StockGraphHostingView.m in Sources */,
+				D625DFC11AA6A86F000A82DC /* MyKlineViewController.m in Sources */,
 				D6B0A8621AA56CF700020C7B /* StockCrossShapedView.m in Sources */,
 				D6B0A8681AA57C6100020C7B /* StockPriceMovementUtil.m in Sources */,
 				D6B0A84E1AA562B700020C7B /* BaseViewController.m in Sources */,

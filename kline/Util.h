@@ -11,21 +11,6 @@
 
 @interface Util : NSObject
 
-/**************************  factory     *************************/
-
-/** 实例化一个Button*/
-- (UIButton *)initializeCustomButtonFrame:(CGRect)rect title:(NSString *)title target:(id)object action:(SEL)action;
-
-/** 实例化一个线框View*/
-+ (UIView *)initializeCustomViewFrame:(CGRect)rect borderColor:(NSString *)colorName;
-
-/** 实例化一个线框View*/
-+ (UILabel *)initializeCustomLabelFrame:(CGRect)rect textColor:(NSString *)colorName title:(NSString *)title textAlignment:(NSTextAlignment)textAlignment;
-/** 实例化一个线框View*/
-+ (UILabel *)creatMovelLineLabelFrame:(CGRect)rect;
-
-
-
 
 /*********************    ModelManager   ***********************/
 

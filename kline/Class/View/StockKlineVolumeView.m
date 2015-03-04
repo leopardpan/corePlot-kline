@@ -25,7 +25,7 @@
     long maxVolume = 0;
     // 先循环一次datasource获得最高价和最低价
     for (NSDictionary *map in dataSource) {
-        NSString *value = (NSString *)[map objectForKey:@"VOLUME"];
+        NSString *value = (NSString *)[map objectForKey:@"volume"];
         
         long long mVolume = [value longLongValue];
         if (maxVolume == 0 || maxVolume < mVolume) {
@@ -76,9 +76,9 @@
     for (NSNumber *idx in indexs) {
         NSDictionary *infoMap = (NSDictionary *)[dataSource objectAtIndex:[idx intValue]];
         if ([idx intValue] == 0) {
-            [labels setObject:[NSNumber numberWithInt:([idx intValue] + 5)] forKey:[infoMap objectForKey:@"DATA"]];
+            [labels setObject:[NSNumber numberWithInt:([idx intValue] + 5)] forKey:[infoMap objectForKey:@"date"]];
         } else {
-            [labels setObject:[NSNumber numberWithInt:([idx intValue] - 5)] forKey:[infoMap objectForKey:@"DATA"]];
+            [labels setObject:[NSNumber numberWithInt:([idx intValue] - 5)] forKey:[infoMap objectForKey:@"date"]];
         }
         
     }

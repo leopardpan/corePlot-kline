@@ -7,11 +7,12 @@
 //
 
 #import "ViewController.h"
-#import "StockKlineViewController.h"
+#import "MyKlineViewController.h"
+#import "CorePlotKlineViewController.h"
 
-@interface ViewController ()
+@interface ViewController()<UITableViewDataSource,UITableViewDelegate>
 
-@property (nonatomic, strong) StockKlineViewController* klineVC;
+@property (nonatomic, strong) NSArray *tableViewDataSource;
 
 @end
 
@@ -20,15 +21,40 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    NSArray *data = @[@"MyKlineViewController",@"CorePlotKlineViewController"];
+    self.tableViewDataSource =  data;
     
-    StockKlineViewController *klineVC = [[StockKlineViewController alloc] init];
-    self.klineVC = klineVC;
+    [self creatUI];
 
-    self.klineVC.view.frame = self.view.frame;
-    [self.view addSubview:self.klineVC.view];
+}
+- (void)creatUI
+{
+    UITableView *tableView = [[UITableView alloc] initWithFrame:self.view.frame style:UITableViewStylePlain];
+    tableView.delegate = self;
+    tableView.dataSource = self;
+    [self.view addSubview:tableView];
+}
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return self.tableViewDataSource.count;
+}
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *ID= @"cell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
+    if (!cell) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:ID];
+    }
+    cell.textLabel.text = self.tableViewDataSource[indexPath.row];
+    
+    return cell;
+}
 
-    [self addChildViewController:klineVC];
-
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    Class vcName = NSClassFromString(self.tableViewDataSource[indexPath.row]);
+    UIViewController *vc = [[vcName alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 @end
