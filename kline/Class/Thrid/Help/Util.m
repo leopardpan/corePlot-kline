@@ -7,6 +7,8 @@
 //
 
 #import "Util.h"
+#import "UIColor+helper.h"
+
 
 @implementation Util
 {
@@ -21,6 +23,55 @@
     }
     return self;
 }
+- (UIButton *)initializeCustomButtonFrame:(CGRect)rect title:(NSString *)title target:(id)obj action:(SEL)action
+{
+    
+    UIButton *btn = [[UIButton alloc] initWithFrame:rect];
+    [btn setTitle:title forState:UIControlStateNormal];
+    [btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [btn addTarget:obj action:action forControlEvents:UIControlEventTouchUpInside];
+    btn.backgroundColor = [UIColor colorWithHexString:@"#EBEBEB" withAlpha:1];
+    return btn;
+}
+
++ (UIView *)initializeCustomViewFrame:(CGRect)rect borderColor:(NSString *)colorName
+{
+    UIView *view = [[UIView alloc] initWithFrame:rect];
+    // 主视图的边框颜色
+    view.layer.borderColor = [UIColor colorWithHexString:colorName withAlpha:1].CGColor;
+    
+    // 主视图的边框宽度
+    view.layer.borderWidth = 0.5;
+    view.userInteractionEnabled = YES;
+    
+    return view;
+}
+
++ (UILabel *)initializeCustomLabelFrame:(CGRect)rect textColor:(NSString *)colorName title:(NSString *)title textAlignment:(NSTextAlignment)textAlignment
+{
+    
+    UILabel * label = [[UILabel alloc] initWithFrame:rect];
+    label.backgroundColor = [UIColor clearColor];
+    label.font = [UIFont systemFontOfSize:8];
+    label.text = title;
+    label.textAlignment = textAlignment;
+    label.textColor = [UIColor colorWithHexString:colorName withAlpha:1];
+    //    [label sizeToFit];
+    return label;
+}
++ (UILabel *)creatMovelLineLabelFrame:(CGRect)rect
+{
+    UILabel *label = [[UILabel alloc] initWithFrame:rect];
+    label.font = [UIFont systemFontOfSize:8];
+    label.layer.cornerRadius = 5;
+    label.backgroundColor = [UIColor whiteColor];
+    label.textColor = [UIColor blackColor];
+    label.textAlignment = UITextAlignmentCenter;
+    label.alpha = 0.8;
+    
+    return label;
+}
+
 
 - (NSNumber *)sumArrayWithData:(NSArray *)data andRange:(NSRange)range
 {

@@ -51,16 +51,26 @@
     StockPadding uiviewPadding = {50,0,30,10};
     StockDrawInfo uiview1DrawInfo = {YES,YES,YES,NO,YES};
     StockGesture uiview1Gesture = {YES,YES,YES};
+   
     
     // k线图
     CGFloat width ;
     CGFloat hight ;
     if (self.isHorizontal) {
-        width = self.view.frame.size.height-64;
-        hight = self.view.frame.size.width-120;
+         width = self.view.frame.size.height-64;
+        if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+            
+            hight = 300;
+        }else{
+            hight = self.view.frame.size.width-120;
+        }
     }else{
-        width = self.view.frame.size.width;
-        hight = self.view.frame.size.height-100-64-20;
+         width = self.view.frame.size.width;
+        if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+            hight = 300;
+        }else {
+            hight = self.view.frame.size.height-100-64-20;
+        }
     }
     
     StockKlineView *uiview1 = [[StockKlineView alloc] initWithFrame:CGRectMake(0, 0, width, hight) tag:@"kline" padding:uiviewPadding drawInfo:uiview1DrawInfo gesture:uiview1Gesture delegate:self isKline:YES];

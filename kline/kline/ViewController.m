@@ -31,9 +31,10 @@
 }
 - (void)creatUI
 {
-    UITableView *tableView = [[UITableView alloc] initWithFrame:self.view.frame style:UITableViewStylePlain];
+    UITableView *tableView = [[UITableView alloc] initWithFrame:self.view.frame style:UITableViewStyleGrouped];
     tableView.delegate = self;
     tableView.dataSource = self;
+    
     [self.view addSubview:tableView];
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -51,7 +52,6 @@
     
     return cell;
 }
-
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     Class vcName = NSClassFromString(self.tableViewDataSource[indexPath.row]);

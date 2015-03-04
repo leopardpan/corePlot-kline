@@ -137,8 +137,6 @@ static const NSTimeInterval oneDay = 24 * 60 * 60;
      */
     
 
-    
-    
     CPTXYAxis *yAxis     = xyAxisSet.yAxis;
     yAxis.orthogonalCoordinateDecimal = CPTDecimalFromDouble(-0.5 * oneDay);
     yAxis.minorTickLineStyle = nil;
@@ -154,7 +152,7 @@ static const NSTimeInterval oneDay = 24 * 60 * 60;
     
     CPTColor *areaColor       = [CPTColor colorWithComponentRed:CPTFloat(1.0) green:CPTFloat(1.0) blue:CPTFloat(1.0) alpha:CPTFloat(1.0)];
     CPTGradient *areaGradient = [CPTGradient gradientWithBeginningColor:areaColor endingColor:[CPTColor clearColor]];
-    areaGradient.angle = -90.0;
+    areaGradient.angle        = -90.0;
     CPTFill *areaGradientFill = [CPTFill fillWithGradient:areaGradient];
     dataSourceLinePlot.areaFill       = areaGradientFill;
     dataSourceLinePlot.areaBaseValue  = CPTDecimalFromDouble(0.0);
