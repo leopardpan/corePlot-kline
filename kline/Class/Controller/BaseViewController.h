@@ -45,4 +45,7 @@
  * @brief       修改数据源触发
  */
 - (void)dataSourceChange;
+
+@property (nonatomic, assign) BOOL isHorizontal;
+
 @end

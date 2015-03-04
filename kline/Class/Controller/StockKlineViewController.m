@@ -53,7 +53,17 @@
     StockGesture uiview1Gesture = {YES,YES,YES};
     
     // k线图
-    StockKlineView *uiview1 = [[StockKlineView alloc] initWithFrame:CGRectMake(0, 0, k_screen_width, 300) tag:@"kline" padding:uiviewPadding drawInfo:uiview1DrawInfo gesture:uiview1Gesture delegate:self isKline:YES];
+    CGFloat width ;
+    CGFloat hight ;
+    if (self.isHorizontal) {
+        width = self.view.frame.size.height-64;
+        hight = self.view.frame.size.width-120;
+    }else{
+        width = self.view.frame.size.width;
+        hight = self.view.frame.size.height-100-64-20;
+    }
+    
+    StockKlineView *uiview1 = [[StockKlineView alloc] initWithFrame:CGRectMake(0, 0, width, hight) tag:@"kline" padding:uiviewPadding drawInfo:uiview1DrawInfo gesture:uiview1Gesture delegate:self isKline:YES];
     uiview1.backgroundColor = [UIColor colorWithHexString:@"#FFFFFF"];
     
     [stockBaseViewMap setObject:uiview1 forKey:@"kline"];
@@ -61,7 +71,7 @@
     StockGesture uiview2Gesture = {NO, NO, NO};
     
     // 成交量图
-    StockKlineVolumeView *uiview2 = [[StockKlineVolumeView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(uiview1.frame)+20, k_screen_width, 150) tag:@"kline" padding:uiviewPadding drawInfo:uiview2DrawInfo gesture:uiview2Gesture delegate:self isKline:NO];
+    StockKlineVolumeView *uiview2 = [[StockKlineVolumeView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(uiview1.frame)+20, width, 80) tag:@"kline" padding:uiviewPadding drawInfo:uiview2DrawInfo gesture:uiview2Gesture delegate:self isKline:NO];
     //     uiview2.backgroundColor = [UIColor colorWithHexString:@"#B7B7B7"];
     
     [stockBaseViewMap setObject:uiview2 forKey:@"volume"];

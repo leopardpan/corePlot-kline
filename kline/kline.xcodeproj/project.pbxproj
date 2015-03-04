@@ -14,6 +14,8 @@
 		D625DFCC1AA6B261000A82DC /* PlotGallery.m in Sources */ = {isa = PBXBuildFile; fileRef = D625DFC81AA6B261000A82DC /* PlotGallery.m */; };
 		D625DFCD1AA6B261000A82DC /* PlotItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D625DFCA1AA6B261000A82DC /* PlotItem.m */; };
 		D625DFD11AA6D64A000A82DC /* data.plist in Resources */ = {isa = PBXBuildFile; fileRef = D625DFD01AA6D64A000A82DC /* data.plist */; };
+		D625DFD41AA70425000A82DC /* myKlineLittleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D625DFD31AA70425000A82DC /* myKlineLittleViewController.m */; };
+		D625DFD71AA70942000A82DC /* MyCustomKlineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D625DFD61AA70942000A82DC /* MyCustomKlineViewController.m */; };
 		D6B0A8231AA5590D00020C7B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B0A8221AA5590D00020C7B /* main.m */; };
 		D6B0A8261AA5590D00020C7B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B0A8251AA5590D00020C7B /* AppDelegate.m */; };
 		D6B0A8291AA5590D00020C7B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B0A8281AA5590D00020C7B /* ViewController.m */; };
@@ -58,6 +60,10 @@
 		D625DFC91AA6B261000A82DC /* PlotItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlotItem.h; sourceTree = "<group>"; };
 		D625DFCA1AA6B261000A82DC /* PlotItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlotItem.m; sourceTree = "<group>"; };
 		D625DFD01AA6D64A000A82DC /* data.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = data.plist; sourceTree = "<group>"; };
+		D625DFD21AA70425000A82DC /* myKlineLittleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = myKlineLittleViewController.h; sourceTree = "<group>"; };
+		D625DFD31AA70425000A82DC /* myKlineLittleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = myKlineLittleViewController.m; sourceTree = "<group>"; };
+		D625DFD51AA70942000A82DC /* MyCustomKlineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCustomKlineViewController.h; sourceTree = "<group>"; };
+		D625DFD61AA70942000A82DC /* MyCustomKlineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCustomKlineViewController.m; sourceTree = "<group>"; };
 		D6B0A81D1AA5590D00020C7B /* kline.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kline.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6B0A8211AA5590D00020C7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D6B0A8221AA5590D00020C7B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -224,8 +230,12 @@
 				D6B0A8501AA562D900020C7B /* StockKlineViewController.m */,
 				D625DFBF1AA6A86F000A82DC /* MyKlineViewController.h */,
 				D625DFC01AA6A86F000A82DC /* MyKlineViewController.m */,
+				D625DFD21AA70425000A82DC /* myKlineLittleViewController.h */,
+				D625DFD31AA70425000A82DC /* myKlineLittleViewController.m */,
 				D625DFC21AA6AFA4000A82DC /* CorePlotKlineViewController.h */,
 				D625DFC31AA6AFA4000A82DC /* CorePlotKlineViewController.m */,
+				D625DFD51AA70942000A82DC /* MyCustomKlineViewController.h */,
+				D625DFD61AA70942000A82DC /* MyCustomKlineViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -432,12 +442,14 @@
 				D6B0A85D1AA5662300020C7B /* StockGraphHostingView.m in Sources */,
 				D625DFCC1AA6B261000A82DC /* PlotGallery.m in Sources */,
 				D625DFC11AA6A86F000A82DC /* MyKlineViewController.m in Sources */,
+				D625DFD71AA70942000A82DC /* MyCustomKlineViewController.m in Sources */,
 				D6B0A8621AA56CF700020C7B /* StockCrossShapedView.m in Sources */,
 				D6B0A8681AA57C6100020C7B /* StockPriceMovementUtil.m in Sources */,
 				D6B0A84E1AA562B700020C7B /* BaseViewController.m in Sources */,
 				D6B0A86B1AA57ED400020C7B /* StockKlineData.m in Sources */,
 				D6B0A8261AA5590D00020C7B /* AppDelegate.m in Sources */,
 				D6B0A8541AA5632100020C7B /* StockBaseView.m in Sources */,
+				D625DFD41AA70425000A82DC /* myKlineLittleViewController.m in Sources */,
 				D6B0A8231AA5590D00020C7B /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

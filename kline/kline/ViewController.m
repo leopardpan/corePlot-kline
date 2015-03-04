@@ -9,6 +9,8 @@
 #import "ViewController.h"
 #import "MyKlineViewController.h"
 #import "CorePlotKlineViewController.h"
+#import "MyCustomKlineViewController.h"
+
 
 @interface ViewController()<UITableViewDataSource,UITableViewDelegate>
 
@@ -21,7 +23,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    NSArray *data = @[@"MyKlineViewController",@"CorePlotKlineViewController"];
+    NSArray *data = @[@"MyKlineViewController",@"CorePlotKlineViewController",@"MyCustomKlineViewController"];
     self.tableViewDataSource =  data;
     
     [self creatUI];
