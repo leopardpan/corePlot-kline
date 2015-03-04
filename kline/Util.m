@@ -84,6 +84,22 @@
     return myDict;
 }
 
+- (float) getMaxWithNum1:(float)num1 num2:(float)num2 num3:(float)num3
+{
+    float max = num1;
+    max = max > num2 ? max : num2;
+    max = max > num3 ? max : num3;
+    return max;
+}
+
+- (float) getMinWithNum1:(float)num1 num2:(float)num2 num3:(float)num3
+{
+    float min = num1;
+    min = min < num2 ? min : num2;
+    min = min < num3 ? min : num3;
+    return min;
+}
+
 - (NSString*)filePath:(NSString *)fileName
 {
     NSString *path=NSHomeDirectory();

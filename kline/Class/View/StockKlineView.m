@@ -8,10 +8,23 @@
 
 #import "StockKlineView.h"
 #import "StockPriceMovementUtil.h"
+#import "Util.h"
+
+@interface StockKlineView()
+
+@property (nonatomic, strong) Util *util;
+
+@end
 
 @implementation StockKlineView
+
 - (void)changeXYAxisWithXLen:(int)xLen dataSource:(NSArray *)dataSource
 {
+    
+    if (!self.util) {
+        self.util = [[Util alloc] init];
+    }
+    
     float maxValueY = 0.0f, minValueY = 0.0f;
     
     // 先循环一次datasource获得最高价和最低价
@@ -19,8 +32,8 @@
         float mZGCJ = [(NSNumber *)[map objectForKey:@"high"] floatValue];
         float mZDCJ = [(NSNumber *)[map objectForKey:@"low"] floatValue];
         float mADJ = [(NSNumber *)[map objectForKey:@"adj"] floatValue];
-        float max = [self getMaxWithNum1:mZDCJ num2:mZGCJ num3:mADJ];
-        float min = [self getMinWithNum1:mZDCJ num2:mZGCJ num3:mADJ];
+        float max = [self.util getMaxWithNum1:mZDCJ num2:mZGCJ num3:mADJ];
+        float min = [self.util getMinWithNum1:mZDCJ num2:mZGCJ num3:mADJ];
         
         if (maxValueY == 0 || max > maxValueY) {
             maxValueY = max;
@@ -158,22 +171,6 @@
     
     [graph addPlot:avgPricePlot];
     [array addObject:avgPricePlot];
-}
-
-- (float) getMaxWithNum1:(float)num1 num2:(float)num2 num3:(float)num3
-{
-    float max = num1;
-    max = max > num2 ? max : num2;
-    max = max > num3 ? max : num3;
-    return max;
-}
-
-- (float) getMinWithNum1:(float)num1 num2:(float)num2 num3:(float)num3
-{
-    float min = num1;
-    min = min < num2 ? min : num2;
-    min = min < num3 ? min : num3;
-    return min;
 }
 
 

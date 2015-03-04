@@ -10,6 +10,10 @@
 		0EAE7426BE3953A92698D293 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A35CEE7C9D7A877DF1B75F9 /* libPods.a */; };
 		D625DFC11AA6A86F000A82DC /* MyKlineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D625DFC01AA6A86F000A82DC /* MyKlineViewController.m */; };
 		D625DFC41AA6AFA4000A82DC /* CorePlotKlineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D625DFC31AA6AFA4000A82DC /* CorePlotKlineViewController.m */; };
+		D625DFCB1AA6B261000A82DC /* OHLCPlot.m in Sources */ = {isa = PBXBuildFile; fileRef = D625DFC61AA6B261000A82DC /* OHLCPlot.m */; };
+		D625DFCC1AA6B261000A82DC /* PlotGallery.m in Sources */ = {isa = PBXBuildFile; fileRef = D625DFC81AA6B261000A82DC /* PlotGallery.m */; };
+		D625DFCD1AA6B261000A82DC /* PlotItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D625DFCA1AA6B261000A82DC /* PlotItem.m */; };
+		D625DFD11AA6D64A000A82DC /* data.plist in Resources */ = {isa = PBXBuildFile; fileRef = D625DFD01AA6D64A000A82DC /* data.plist */; };
 		D6B0A8231AA5590D00020C7B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B0A8221AA5590D00020C7B /* main.m */; };
 		D6B0A8261AA5590D00020C7B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B0A8251AA5590D00020C7B /* AppDelegate.m */; };
 		D6B0A8291AA5590D00020C7B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B0A8281AA5590D00020C7B /* ViewController.m */; };
@@ -28,7 +32,6 @@
 		D6B0A8681AA57C6100020C7B /* StockPriceMovementUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B0A8671AA57C6100020C7B /* StockPriceMovementUtil.m */; };
 		D6B0A86B1AA57ED400020C7B /* StockKlineData.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B0A86A1AA57ED400020C7B /* StockKlineData.m */; };
 		D6B0A86E1AA57F3F00020C7B /* Util.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B0A86D1AA57F3F00020C7B /* Util.m */; };
-		D6B0A8711AA584EA00020C7B /* data.plist in Resources */ = {isa = PBXBuildFile; fileRef = D6B0A8701AA584EA00020C7B /* data.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +51,13 @@
 		D625DFC01AA6A86F000A82DC /* MyKlineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyKlineViewController.m; sourceTree = "<group>"; };
 		D625DFC21AA6AFA4000A82DC /* CorePlotKlineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CorePlotKlineViewController.h; sourceTree = "<group>"; };
 		D625DFC31AA6AFA4000A82DC /* CorePlotKlineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CorePlotKlineViewController.m; sourceTree = "<group>"; };
+		D625DFC51AA6B261000A82DC /* OHLCPlot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHLCPlot.h; sourceTree = "<group>"; };
+		D625DFC61AA6B261000A82DC /* OHLCPlot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHLCPlot.m; sourceTree = "<group>"; };
+		D625DFC71AA6B261000A82DC /* PlotGallery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlotGallery.h; sourceTree = "<group>"; };
+		D625DFC81AA6B261000A82DC /* PlotGallery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlotGallery.m; sourceTree = "<group>"; };
+		D625DFC91AA6B261000A82DC /* PlotItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlotItem.h; sourceTree = "<group>"; };
+		D625DFCA1AA6B261000A82DC /* PlotItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlotItem.m; sourceTree = "<group>"; };
+		D625DFD01AA6D64A000A82DC /* data.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = data.plist; sourceTree = "<group>"; };
 		D6B0A81D1AA5590D00020C7B /* kline.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kline.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6B0A8211AA5590D00020C7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D6B0A8221AA5590D00020C7B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -84,7 +94,6 @@
 		D6B0A86A1AA57ED400020C7B /* StockKlineData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StockKlineData.m; sourceTree = SOURCE_ROOT; };
 		D6B0A86C1AA57F3F00020C7B /* Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Util.h; sourceTree = SOURCE_ROOT; };
 		D6B0A86D1AA57F3F00020C7B /* Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Util.m; sourceTree = SOURCE_ROOT; };
-		D6B0A8701AA584EA00020C7B /* data.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = data.plist; sourceTree = "<group>"; };
 		DCA07A15189B41A2DD0125E3 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -114,6 +123,22 @@
 				DCA07A15189B41A2DD0125E3 /* Pods.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		D625DFCE1AA6D64A000A82DC /* Thrid */ = {
+			isa = PBXGroup;
+			children = (
+				D625DFCF1AA6D64A000A82DC /* DataResource */,
+			);
+			path = Thrid;
+			sourceTree = "<group>";
+		};
+		D625DFCF1AA6D64A000A82DC /* DataResource */ = {
+			isa = PBXGroup;
+			children = (
+				D625DFD01AA6D64A000A82DC /* data.plist */,
+			);
+			path = DataResource;
 			sourceTree = "<group>";
 		};
 		D6B0A8141AA5590D00020C7B = {
@@ -181,10 +206,10 @@
 		D6B0A8461AA55A9300020C7B /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				D625DFCE1AA6D64A000A82DC /* Thrid */,
 				D6B0A8471AA55A9300020C7B /* Controller */,
 				D6B0A8481AA55A9300020C7B /* Help */,
 				D6B0A8491AA55A9300020C7B /* Model */,
-				D6B0A84A1AA55A9300020C7B /* Thrid */,
 				D6B0A84B1AA55A9300020C7B /* View */,
 			);
 			path = Class;
@@ -228,17 +253,15 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		D6B0A84A1AA55A9300020C7B /* Thrid */ = {
-			isa = PBXGroup;
-			children = (
-				D6B0A86F1AA584EA00020C7B /* Resource */,
-			);
-			path = Thrid;
-			sourceTree = "<group>";
-		};
 		D6B0A84B1AA55A9300020C7B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D625DFC51AA6B261000A82DC /* OHLCPlot.h */,
+				D625DFC61AA6B261000A82DC /* OHLCPlot.m */,
+				D625DFC71AA6B261000A82DC /* PlotGallery.h */,
+				D625DFC81AA6B261000A82DC /* PlotGallery.m */,
+				D625DFC91AA6B261000A82DC /* PlotItem.h */,
+				D625DFCA1AA6B261000A82DC /* PlotItem.m */,
 				D6B0A8521AA5632100020C7B /* StockBaseView.h */,
 				D6B0A8531AA5632100020C7B /* StockBaseView.m */,
 				D6B0A8551AA5635600020C7B /* StockKlineView.h */,
@@ -251,14 +274,6 @@
 				D6B0A85C1AA5662300020C7B /* StockGraphHostingView.m */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		D6B0A86F1AA584EA00020C7B /* Resource */ = {
-			isa = PBXGroup;
-			children = (
-				D6B0A8701AA584EA00020C7B /* data.plist */,
-			);
-			path = Resource;
 			sourceTree = "<group>";
 		};
 		EF3EF21688F53D20733974E1 /* Frameworks */ = {
@@ -353,7 +368,7 @@
 			files = (
 				D6B0A82C1AA5590D00020C7B /* Main.storyboard in Resources */,
 				D6B0A8311AA5590D00020C7B /* LaunchScreen.xib in Resources */,
-				D6B0A8711AA584EA00020C7B /* data.plist in Resources */,
+				D625DFD11AA6D64A000A82DC /* data.plist in Resources */,
 				D6B0A82E1AA5590D00020C7B /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -408,11 +423,14 @@
 				D6B0A8511AA562D900020C7B /* StockKlineViewController.m in Sources */,
 				D6B0A8291AA5590D00020C7B /* ViewController.m in Sources */,
 				D625DFC41AA6AFA4000A82DC /* CorePlotKlineViewController.m in Sources */,
+				D625DFCB1AA6B261000A82DC /* OHLCPlot.m in Sources */,
 				D6B0A8651AA56EC900020C7B /* UIColor+Style.m in Sources */,
+				D625DFCD1AA6B261000A82DC /* PlotItem.m in Sources */,
 				D6B0A8571AA5635600020C7B /* StockKlineView.m in Sources */,
 				D6B0A85A1AA5639300020C7B /* StockKlineVolumeView.m in Sources */,
 				D6B0A86E1AA57F3F00020C7B /* Util.m in Sources */,
 				D6B0A85D1AA5662300020C7B /* StockGraphHostingView.m in Sources */,
+				D625DFCC1AA6B261000A82DC /* PlotGallery.m in Sources */,
 				D625DFC11AA6A86F000A82DC /* MyKlineViewController.m in Sources */,
 				D6B0A8621AA56CF700020C7B /* StockCrossShapedView.m in Sources */,
 				D6B0A8681AA57C6100020C7B /* StockPriceMovementUtil.m in Sources */,

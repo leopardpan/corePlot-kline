@@ -35,4 +35,8 @@
 /** CGFloat Change PriceNSString*/
 + (NSString*)changePrice:(CGFloat)price;
 
+- (float) getMaxWithNum1:(float)num1 num2:(float)num2 num3:(float)num3;
+
+- (float) getMinWithNum1:(float)num1 num2:(float)num2 num3:(float)num3;
+
 @end
