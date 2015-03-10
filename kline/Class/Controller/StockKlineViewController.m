@@ -36,7 +36,7 @@
 {
     self = [super init];
     if (self) {
-        xAxisLen = 150;
+        xAxisLen = 40;
     }
     return self;
 }

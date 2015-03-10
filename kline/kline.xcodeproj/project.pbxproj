@@ -40,6 +40,10 @@
 		D6B0A83D1AA5590E00020C7B /* klineTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B0A83C1AA5590D00020C7B /* klineTests.m */; };
 		D6B0A84E1AA562B700020C7B /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B0A84D1AA562B700020C7B /* BaseViewController.m */; };
 		D6B0A8511AA562D900020C7B /* StockKlineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B0A8501AA562D900020C7B /* StockKlineViewController.m */; };
+		D6D430FE1AA8591D0034CCFE /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6D430FD1AA8591D0034CCFE /* MobileCoreServices.framework */; };
+		D6D431001AA8592A0034CCFE /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6D430FF1AA8592A0034CCFE /* SystemConfiguration.framework */; };
+		D6D431021AA859350034CCFE /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6D431011AA859350034CCFE /* CFNetwork.framework */; };
+		D6D431041AA859410034CCFE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6D431031AA859410034CCFE /* CoreGraphics.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -118,6 +122,10 @@
 		D6B0A84D1AA562B700020C7B /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		D6B0A84F1AA562D900020C7B /* StockKlineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StockKlineViewController.h; sourceTree = "<group>"; };
 		D6B0A8501AA562D900020C7B /* StockKlineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StockKlineViewController.m; sourceTree = "<group>"; };
+		D6D430FD1AA8591D0034CCFE /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		D6D430FF1AA8592A0034CCFE /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		D6D431011AA859350034CCFE /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		D6D431031AA859410034CCFE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		DCA07A15189B41A2DD0125E3 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -126,6 +134,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6D431041AA859410034CCFE /* CoreGraphics.framework in Frameworks */,
+				D6D431021AA859350034CCFE /* CFNetwork.framework in Frameworks */,
+				D6D431001AA8592A0034CCFE /* SystemConfiguration.framework in Frameworks */,
+				D6D430FE1AA8591D0034CCFE /* MobileCoreServices.framework in Frameworks */,
 				0EAE7426BE3953A92698D293 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -343,6 +355,10 @@
 		EF3EF21688F53D20733974E1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D6D431031AA859410034CCFE /* CoreGraphics.framework */,
+				D6D431011AA859350034CCFE /* CFNetwork.framework */,
+				D6D430FF1AA8592A0034CCFE /* SystemConfiguration.framework */,
+				D6D430FD1AA8591D0034CCFE /* MobileCoreServices.framework */,
 				4A35CEE7C9D7A877DF1B75F9 /* libPods.a */,
 			);
 			name = Frameworks;

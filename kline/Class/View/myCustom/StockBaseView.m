@@ -55,8 +55,6 @@
     CPTXYPlotSpace *plotSpace = (CPTXYPlotSpace *)graph.defaultPlotSpace;
     plotSpace.allowsUserInteraction = NO;
     
-    // 设置自定义主题
-    //    CPTTheme *theme = [[StockTheme alloc] init];
     // 系统主题
     CPTTheme *theme = [CPTTheme themeNamed:kCPTPlainWhiteTheme];
     

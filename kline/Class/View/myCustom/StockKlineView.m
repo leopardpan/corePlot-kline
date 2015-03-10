@@ -116,6 +116,7 @@
     kpPlot.delegate = delegate;
     // 设置柱状图的线条
     CPTMutableLineStyle *borderLineStyle = [CPTMutableLineStyle lineStyle];
+    // 阴影宽度
     borderLineStyle.lineWidth = 0.0f;
     kpPlot.lineStyle = borderLineStyle;
     // 设置柱状图的宽度

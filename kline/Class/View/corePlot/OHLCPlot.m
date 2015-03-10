@@ -48,7 +48,7 @@ static const NSTimeInterval oneDay = 24 * 60 * 60;
     }
     
         NSMutableArray *newData = [NSMutableArray array];
-        for ( NSUInteger i = abs(self.panOffset); i < 25; i++ ) {
+        for ( NSUInteger i = abs(self.panOffset); i < 40; i++ ) {
             NSTimeInterval x = oneDay * i;
 
 
@@ -138,7 +138,7 @@ static const NSTimeInterval oneDay = 24 * 60 * 60;
     
 
     CPTXYAxis *yAxis     = xyAxisSet.yAxis;
-    yAxis.orthogonalCoordinateDecimal = CPTDecimalFromDouble(-0.5 * oneDay);
+    yAxis.orthogonalCoordinateDecimal = CPTDecimalFromDouble( oneDay );
     yAxis.minorTickLineStyle = nil;
     
     // Line plot with gradient fill
@@ -152,7 +152,7 @@ static const NSTimeInterval oneDay = 24 * 60 * 60;
     
     CPTColor *areaColor       = [CPTColor colorWithComponentRed:CPTFloat(1.0) green:CPTFloat(1.0) blue:CPTFloat(1.0) alpha:CPTFloat(1.0)];
     CPTGradient *areaGradient = [CPTGradient gradientWithBeginningColor:areaColor endingColor:[CPTColor clearColor]];
-    areaGradient.angle        = -90.0;
+    areaGradient.angle        = -90.0; // 填充渐变的角度
     CPTFill *areaGradientFill = [CPTFill fillWithGradient:areaGradient];
     dataSourceLinePlot.areaFill       = areaGradientFill;
     dataSourceLinePlot.areaBaseValue  = CPTDecimalFromDouble(0.0);

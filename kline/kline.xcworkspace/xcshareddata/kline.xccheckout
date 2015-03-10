@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>19BBC3C5-0E14-4B39-8E4D-12E4F4335E8D</string>
+	<key>IDESourceControlProjectName</key>
+	<string>kline</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>D07DF11A9540EE81471E7346BD7CC1EC360BCE7F</key>
+		<string>https://github.com/leopardpan/corePlot-kline.git</string>
+		<key>D3C58F24AEF0C81DF1EEBE503D3B092427856CD8</key>
+		<string>https://bitbucket.org/leopardsnow/myproject.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>kline/kline.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>D07DF11A9540EE81471E7346BD7CC1EC360BCE7F</key>
+		<string>../..</string>
+		<key>D3C58F24AEF0C81DF1EEBE503D3B092427856CD8</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/leopardpan/corePlot-kline.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>D07DF11A9540EE81471E7346BD7CC1EC360BCE7F</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>D3C58F24AEF0C81DF1EEBE503D3B092427856CD8</string>
+			<key>IDESourceControlWCCName</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>D07DF11A9540EE81471E7346BD7CC1EC360BCE7F</string>
+			<key>IDESourceControlWCCName</key>
+			<string>caishuodemo</string>
+		</dict>
+	</array>
+</dict>
+</plist>

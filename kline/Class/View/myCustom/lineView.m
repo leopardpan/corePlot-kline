@@ -11,6 +11,7 @@
 #import "Util.h"
 
 #define urkKline @"http://rest.office.caishuo.com:80/v1/stocks/k.json?base_stock_id=1&type=%@"
+
 #define avgLineTag 90
 
 @interface lineView()<UIGestureRecognizerDelegate>
@@ -78,8 +79,6 @@
 }
 
 -(void)initSet{
-    
-    
     
     if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad){
         
@@ -448,7 +447,7 @@
         // 手指离开屏幕，记录当前偏移量，开启滚动定时器
         isUpInSide = NO;
         panCount = point.x + panCount;
-        [_timer setFireDate:[NSDate distantPast]];
+//        [_timer setFireDate:[NSDate distantPast]];
         CGPoint velocityPoint = [pan velocityInView:mainboxView]; // 拖拽速度
         [self countScrollOffset:velocityPoint.x];
         return;
